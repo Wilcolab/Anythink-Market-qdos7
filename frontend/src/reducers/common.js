@@ -35,7 +35,12 @@ const reducer = (state = defaultState, action) => {
     case REDIRECT:
       return { ...state, redirectTo: null };
     case LOGOUT:
-      return { ...state, redirectTo: "/", token: null, currentUser: null };
+      return {
+        ...state,
+        redirectTo: "/",
+        token: null,
+        currentUser: null,
+      };
     case ITEM_SUBMITTED: {
       const redirectUrl = `/item/${action.payload.item.slug}`;
       return { ...state, redirectTo: redirectUrl };

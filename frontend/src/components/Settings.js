@@ -22,7 +22,9 @@ class SettingsForm extends React.Component {
 
     this.updateState = (field) => (ev) => {
       const state = this.state;
-      const newState = Object.assign({}, state, { [field]: ev.target.value });
+      const newState = Object.assign({}, state, {
+        [field]: ev.target.value,
+      });
       this.setState(newState);
     };
 
